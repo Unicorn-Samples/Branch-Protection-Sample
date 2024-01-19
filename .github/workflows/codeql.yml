@@ -50,19 +50,18 @@ jobs:
       with:
         java-version: 1.14
 
-    - name: Build with Maven
-      run: mvn clean install -B package --file pom.xml
-
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
         queries: security-and-quality
 
+    - name: Build with Maven
+      run: mvn clean install -B package --file pom.xml
+
 #   This repo fails to use the Autobuild from CodeQL
 #    - name: Autobuild
 #      uses: Anthophila/codeql-action/codeql/autobuild@master
-
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
