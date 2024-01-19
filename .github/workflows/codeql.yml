@@ -64,7 +64,7 @@ jobs:
         queries: security-and-quality
 
     - name: Build with Maven
-      run: mvn clean install -B package --file pom.xml
+      run: mvn package
 
 #   This repo fails to use the Autobuild from CodeQL
 #    - name: Autobuild
