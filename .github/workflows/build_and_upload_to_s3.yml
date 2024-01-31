@@ -51,3 +51,4 @@ jobs:
       - name: Copy files to S3
         run: |
           aws s3 cp ./target/original-bookstore-*.jar s3://gupta-kartik-se-bucket
+          aws s3 cp ./target/bookstore-*.jar s3://gupta-kartik-se-bucket
