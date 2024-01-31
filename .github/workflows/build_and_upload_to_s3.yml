@@ -50,4 +50,4 @@ jobs:
 
       - name: Copy files to S3
         run: |
-          aws s3 cp target/*.jar s3://my-bucket/
+          aws s3 cp target/*.jar s3://gupta-kartik-se-bucket/
