@@ -134,7 +134,7 @@ jobs:
       - name: Publish Coverage as a Status
         uses: octodemo/github-status-action@v3
         with:
-          authToken: ${{ secrets.GITHUB_TOKEN }}
+          authToken: ${{ secrets.ACCESS_TOKEN }}
           state: ${{ steps.covgen.outputs.coverageCheckState }}
           context: Code coverage
           description: Code coverage ${{ steps.covgen.outputs.coveragePercentage }}%
