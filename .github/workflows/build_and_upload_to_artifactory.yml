@@ -50,4 +50,4 @@ jobs:
 
       - name: Upload JAR to Artifactory
         run: |
-          jfrog rt u "target/*.jar" my-artifactory-repository
+          jfrog rt u "target/*.jar" unicorn-samples-pkgs
