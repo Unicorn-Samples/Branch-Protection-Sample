@@ -66,3 +66,7 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
+
+    - uses: actions/download-artifact@v4
+    - name: Display structure of downloaded files
+      run: ls -R
