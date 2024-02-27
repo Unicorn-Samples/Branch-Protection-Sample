@@ -62,7 +62,4 @@ jobs:
         name: bookstore-v3-1.0.0-SNAPSHOT-shaded.jar
         path: ${{ github.workspace }}/**/*.jar
 
-    - uses: actions/download-artifact@v4
-    - name: Display structure of downloaded files
-      run: ls -R
 
