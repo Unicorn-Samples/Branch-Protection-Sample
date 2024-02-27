@@ -28,7 +28,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3 
+      uses: actions/checkout@v3
       with:
         repository: Unicorn-Samples/example-maven-plugin
         ref: master
@@ -54,10 +54,13 @@ jobs:
     - name: Build with Maven
       run: mvn package
 
+    - name: List workspace contents
+      run: ls -R ${{ github.workspace }}
+
     - uses: actions/upload-artifact@v4
       with:
         name: bookstore-v3-1.0.0-SNAPSHOT-shaded.jar
-        path: $GITHUB_WORKSPACE/**/*.jar
+        path: ${{ github.workspace }}/**/*.jar
 
     - uses: actions/download-artifact@v4
     - name: Display structure of downloaded files
