@@ -16,6 +16,6 @@ jobs:
           ref: max-comment-length
           token: ${{ secrets.ACCESS_TOKEN }}
       - name: 'Dependency Review'
-        uses: ./dependency-review-action
+        uses: ./.github/actions/dependency-review-action
         with:
           comment-summary-in-pr: always
