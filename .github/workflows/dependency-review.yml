@@ -15,7 +15,8 @@ jobs:
           repository: actions/dependency-review-action
           ref: max-comment-length
           token: ${{ secrets.ACCESS_TOKEN }}
+          path: local-action
       - name: 'Dependency Review'
-        uses: ./.github/actions/dependency-review-action
+        uses: ./local-action
         with:
           comment-summary-in-pr: always
