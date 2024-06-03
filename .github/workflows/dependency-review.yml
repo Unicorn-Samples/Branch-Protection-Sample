@@ -11,7 +11,11 @@ jobs:
     steps:
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
+        with:
+          repository: actions/dependency-review-action
+          ref: max-comment-length
+          token: ${{ secrets.ACCESS_TOKEN }}
       - name: 'Dependency Review'
-        uses: actions/dependency-review-action@v4
+        uses: ./dependency-review-action
         with:
           comment-summary-in-pr: always
