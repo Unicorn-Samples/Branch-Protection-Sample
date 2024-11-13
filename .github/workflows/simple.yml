@@ -1,0 +1,17 @@
+name: Build and Upload to Artifactory
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build_and_upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo
+        run: echo 'hello world'
+          
