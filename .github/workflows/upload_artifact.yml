@@ -10,6 +10,9 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        environment: [test, production]
 
     strategy:
       fail-fast: false
