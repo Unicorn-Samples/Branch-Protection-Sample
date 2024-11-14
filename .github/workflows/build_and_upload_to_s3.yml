@@ -1,8 +1,6 @@
 name: Build and Upload to S3
 
 on:
-  schedule:
-    - cron:  '0 * * * *'
   pull_request:
   push:
     branches:
