@@ -1,4 +1,4 @@
-name: Build and Upload to Artifactory
+name: Simple Echo
 
 on:
   pull_request:
