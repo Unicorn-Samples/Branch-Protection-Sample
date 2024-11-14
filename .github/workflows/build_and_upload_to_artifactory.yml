@@ -1,8 +1,6 @@
 name: Build and Upload to Artifactory
 
 on:
-  schedule:
-    - cron:  '0 * * * *'
   pull_request:
   push:
     branches:
