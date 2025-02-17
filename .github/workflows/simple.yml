@@ -1,4 +1,4 @@
-name: Simple Echo
+name: Simple Echo 2
 
 on:
   pull_request:
